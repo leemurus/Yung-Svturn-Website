@@ -9,29 +9,38 @@
     <link rel="stylesheet" href="../css/404.css">
 </head>
 <body>
+
+<div class="loader">
+    <div class="content">
+        <div class="planet">
+            <div class="ring"></div>
+            <div class="cover-ring"></div>
+        </div>
+        <p>loading</p>
+    </div>
+</div>
+
 <main>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 align-self-center">
-                <object id="image-404" type="image/svg+xml"  data="../assets/images/404.svg">
-                </object>
-<!--                <svg>-->
-<!--                    <use xlink:href="../assets/images/404.svg#space"></use>-->
-<!--                </svg>-->
-            </div>
-            <div class="col-md-6 align-self-center">
-                <h1>404</h1>
-                <h2>UH OH! You're lost.</h2>
-                <p>The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage.
-                </p>
-                <button class="btn green">HOME</button>
-            </div>
+        <div class="row row-svg">
+            <!-- https://stackoverflow.com/questions/2753732/how-to-access-svg-elements-with-javascript -->
+            <object id="image-404" type="image/svg+xml"  data="../assets/images/404.svg"></object>
+        </div>
+        <div class="row row-text">
+            <h1 class="noselect code-error">404</h1>
+            <h2>UH OH! You're lost.</h2>
+            <p>The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage.
+            </p>
+            <button class="home_button noselect">HOME</button>
         </div>
     </div>
 </main>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 <script type="text/javascript" src="https://livejs.com/live.js"></script>
+<script src="../js/utils.js"></script>
 <script src="../js/404.js"></script>
+
 </body>
 </html>

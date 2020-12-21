@@ -1,46 +1,38 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
 
-
 body {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    font-family: "Nunito Sans";
+    font-family: "Nunito Sans", serif;
     color: white;
-    font-size: 1em;
     background-color: black;
 }
 
-button {
-    font-family: "Nunito Sans";
-}
-
-ul {
-    list-style-type: none;
-    -webkit-padding-start: 35px;
-    padding-inline-start: 35px;
-}
-
-object svg {
-    fill: white;
-    width: 100%;
-    /*visibility: hidden;*/
-}
-
-h1 {
+.code-error {
     font-size: 7.5em;
     margin: 15px 0px;
     font-weight: bold;
 }
 
-h2 {
-    font-weight: bold;
+.container {
+    display: table;
+    height: 100%;
+    width: 100%;
 }
 
-.btn {
+.container .row {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+}
+
+.container .row-svg {
+    text-align: right;
+}
+
+.container .row-svg object {
+    width: 75%;
+}
+
+.home_button {
     z-index: 1;
     overflow: hidden;
     background: transparent;
@@ -56,9 +48,10 @@ h2 {
     font-weight: bold;
     margin: 5px 0px;
     color: white;
+    outline: transparent;
 }
 
-.btn.green:before {
+.home_button:before {
     content: "";
     position: absolute;
     left: 0;
@@ -68,27 +61,16 @@ h2 {
     background: white;
     z-index: -1;
     -webkit-transition: 0.2s ease;
-    transition: 0.2s ease;
+    transition: 0.5s ease;
 }
 
-.btn.green:hover {
+.home_button:hover {
     color: black;
     background: white;
     -webkit-transition: 0.2s ease;
-    transition: 0.2s ease;
+    transition: 1s ease;
 }
 
-.btn.green:hover:before {
+.home_button:hover:before {
     width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        display: block;
-    }
-
-    .container {
-        margin-top: 70px;
-        margin-bottom: 70px;
-    }
 }

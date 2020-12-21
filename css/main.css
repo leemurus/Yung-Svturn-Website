@@ -27,4 +27,16 @@ main {
     font-family: 'road page', serif;
 }
 
+.music-player {
+    width: 10%;
+    height: 10%;
+}
+
+.play-stop-button {
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/images/play-stop-button.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
