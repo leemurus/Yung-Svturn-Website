@@ -1,4 +1,4 @@
-$(window).on('load', function () {
+/*$(window).on('load', function () {
     setTimeout(removeLoader, 1);
 });
 
@@ -7,7 +7,7 @@ function removeLoader() {
         $(".loader").remove();
         $('main').fadeIn(1);
     });
-}
+}*/
 /*
 $(window).on('load', function () {
     setTimeout(removeLoader, 2000);

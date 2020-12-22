@@ -19,8 +19,11 @@ html, body {
     user-select: none; /* Supported by Chrome, Edge, Opera and Firefox */
 }
 
+ body {
+    background-color: #000000;
+}
+
 main {
-    display: none;
     height: 100%;
     width: 100%;
 }
