@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
 
-body {
+main {
+    height: 100%;
+    width: 100%;
     font-family: "Nunito Sans", serif;
-    color: white;
-    background-color: black;
 }
 
 .code-error {

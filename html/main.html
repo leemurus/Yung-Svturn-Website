@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>YUNG SVTURN</title>
-    <link rel="shortcut icon" href="../assets/favicons/saturn.png" type="image/png">
+    <link rel="shortcut icon" href="../assets/favicons/favicon.png" type="image/png">
     <link rel="stylesheet" href="../css/utils.css">
     <link rel="stylesheet" href="../css/loader.css">
     <link rel="stylesheet" href="../css/header.css">
@@ -27,27 +28,45 @@
 <!-- ======================================= HEADER ======================================= -->
 
 <header>
-    <li><a href="main.html">Main</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="track.html">Track</a></li>
+    <div class="container">
+        <div class="logo">
+            <img src="../assets/favicons/favicon.png" alt="">
+            <span class="name noselect">YUNG SVTURN</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a class="noselect" href="main.html">ГЛАВНАЯ</a></li>
+                <li><a class="noselect" href="about.html">ОБО МНЕ</a></li>
+                <li><a class="noselect" href="contact.html">КОНТАКТЫ</a></li>
+                <li><a class="noselect" href="track.html">ТРEК</a></li>
+            </ul>
+        </nav>
+
+    </div>
 </header>
 
 
 <!-- ======================================= MAIN ======================================= -->
 
 <main>
-    <div class="shit noselect">
-        Main
+    <div class="container">
+        <div class="latest-releases">
+            <img src="../assets/images/brilliant.png" alt="">
+        </div>
     </div>
 </main>
-
 
 
 <!-- ======================================= FOOTER ======================================= -->
 
 <footer>
-
+    <div class="socials">
+        <svg class="vk"><use xlink:href="../assets/icons/vk-icon.svg#vk"/></svg>
+<!--        <img class="vk" src="../assets/icons/vk-icon.svg" alt="">-->
+        <img class="instagram" src="../assets/icons/instagram-icon.svg" alt="">
+        <img class="soundcloud" src="../assets/icons/soundcloud-icon.svg" alt="">
+        <img class="youtube" src="../assets/icons/youtube-icon.svg" alt="">
+    </div>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

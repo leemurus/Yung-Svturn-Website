@@ -1,4 +1,86 @@
-header a{
+main {
+    margin-top: 100px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    opacity: 0.9;
+}
+
+header .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .container .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+header .container .logo img {
+    width: 150px;;
+}
+
+header .container .logo .name {
     color: white;
-    font-size: 50px
+    font-size: 30px;
+    font-family: "road page", serif;
+}
+
+header .container nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(100% - 230px);
+    height: 100%;
+}
+
+header .container nav ul {
+    padding: 0;
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+}
+
+header .container nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header .container nav ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 1.25em;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    transition: color .2s linear;
+    position: relative;
+}
+
+header .container nav ul li a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #e8150c;
+    transition: all 0.3s ease-in-out;
+}
+
+header .container nav ul li a:hover:before {
+    visibility: visible;
+    height: 1px;
+}
+
+header .container nav ul li a:hover {
+    color: #e8150c;
 }

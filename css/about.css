@@ -1,12 +1,48 @@
-.shit {
-    position: fixed;
-    height: 100%;
+main .container {
     width: 100%;
-    font-size: 10em;
-    display: flex;
+    margin-top: 150px;
+}
+
+main .container .photo {
+    width: 100%;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'road page', serif;
+}
+
+main .container .photo img {
+    border-radius: 50%;
+    width: 20%;
+}
+
+main .container .title {
+    width: 100%;
+    text-align: center;
+}
+
+main .container .title p {
+    margin: 0 0 30px;
+    font-size: 5em;
+}
+
+main .container .text {
+    margin: 0 auto;
+    width: 50%;
+}
+
+main .container .text p {
+    font-size: 1;
+}
+
+main .container .signature-container {
+    margin: auto;
+    width: 50%;
+    text-align: right;
+}
+
+main .container .signature-container .signature {
+    float: right;
+    text-align: center;
+}
+
+main .container .signature-container .signature .date {
+    margin-top: -10px;
 }

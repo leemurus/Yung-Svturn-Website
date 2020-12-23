@@ -1,3 +1,6 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 @font-face {
     font-family: "road page";
     src: url("https://fontsfree.net//wp-content/fonts/script/handwritten/FontsFree-Net-RoadRage.ttf");
@@ -8,6 +11,8 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
 }
 
 .noselect {
@@ -19,11 +24,10 @@ html, body {
     user-select: none; /* Supported by Chrome, Edge, Opera and Firefox */
 }
 
- body {
+body {
     background-color: #000000;
 }
 
-main {
-    height: 100%;
-    width: 100%;
+::-webkit-scrollbar {
+    width: 0;
 }
