@@ -1,26 +1,64 @@
-.shit {
-    position: fixed;
-    height: 100%;
+:root {
+    --play_button_height: 10vh;
+    --play_button_width: 10vh;
+}
+
+main {
+    margin-top: 15vh;
+}
+
+main .container {
     width: 100%;
-    font-size: 10em;
+}
+
+main .container .track {
+    width: 70%;
+    margin: auto;
     display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-family: 'road page', serif;
 }
 
-
-.music-player {
-    width: 10%;
-    height: 10%;
+main .container .track .cover {
+    width: auto;
 }
 
-.play-stop-button {
+main .container .track .cover img {
+    width: 50vh;
+}
+
+main .container .track .track-panel {
+    margin-left: 5vh;
+}
+
+main .container .track .track-panel .track-info {
+}
+
+main .container .track .track-panel .track-info p {
+    font-size: 3vh;
+    font-weight: bold;
+    margin: 0;
+}
+
+main .container .track .track-panel .track-info .name {
+    margin-top: -0.5vh;
+    margin-bottom: 1.5vh;
+}
+
+main .container .track .track-panel .player {
+    padding-top: 10vh;
+    padding-left: 5vh;
     width: 100%;
     height: 100%;
-    background-image: url("../assets/images/play-stop-button.svg");
+}
+
+main .container .track .track-panel .player .play_button {
+    width: var(--play_button_width);
+    height: var(--play_button_height);
+    background-size: var(--play_button_width) var(--play_button_height);
+    background-image: url("../assets/images/play-button.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+}
+
+main .container .track .track-panel .player .play_button:hover {
+    background-image: url("../assets/images/play-button-hov.svg");
+    background-repeat: no-repeat;
 }

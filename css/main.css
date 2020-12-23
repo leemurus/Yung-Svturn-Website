@@ -3,6 +3,7 @@ body {
 }
 
 main {
+    margin-top: 2vh;
     height: 80%;
     width: 100%;
 }

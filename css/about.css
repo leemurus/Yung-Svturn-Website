@@ -20,16 +20,25 @@ main .container .title {
 
 main .container .title p {
     margin: 0 0 30px;
-    font-size: 5em;
+    font-size: 10vh;
 }
 
 main .container .text {
-    margin: 0 auto;
+    margin: 5vh auto 0;
     width: 50%;
+    text-align: justify;
 }
 
-main .container .text p {
-    font-size: 1;
+main .container .text h2 {
+    font-size: 3vh;
+    white-space: pre-wrap;
+    line-height: normal;
+}
+
+main .container .text pre {
+    font-size: 2vh;
+    white-space: pre-wrap;
+    line-height: normal;
 }
 
 main .container .signature-container {

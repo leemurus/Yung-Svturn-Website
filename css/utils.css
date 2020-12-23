@@ -1,4 +1,4 @@
-@import "reset.css";
+/*@import "reset.css";*/
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 @font-face {
@@ -11,23 +11,27 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Ubuntu', sans-serif;
-    color: white;
-}
-
-.noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Supported by Chrome, Edge, Opera and Firefox */
 }
 
 body {
     background-color: #000000;
 }
 
+/* just * is not working */
+body * {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+
 ::-webkit-scrollbar {
     width: 0;
+}
+
+.not-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Supported by Chrome, Edge, Opera and Firefox */
 }

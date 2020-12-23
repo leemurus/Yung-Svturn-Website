@@ -5,7 +5,7 @@ footer {
     /*visibility: hidden;*/
     /*height: fit-content;*/
 
-    /*position: fixed;*/
+    position: fixed;
     bottom: 0;
     left: 0;
 }
@@ -13,23 +13,54 @@ footer {
 footer .socials {
     display: flex;
     align-items: flex-end;
-    width: fit-content;
-    height: fit-content;
+    justify-content: space-around;
+    /*width: 50vw;*/
+    /*height: 10vh;*/
 }
 
-footer .socials img, footer .socials svg {
-    height: 30px;
+footer .socials a {
+    --icon-width: 40px;
+    --icon-height: 25px;
+    display: flex;
+    width: var(--icon-width);
+    height: var(--icon-height);
+    background-size: var(--icon-width) var(--icon-height);
+    background-repeat: no-repeat;
+}
+
+footer .socials .vk {
+    background-image: url("../assets/icons/same/vk.svg");
+}
+
+footer .socials .vk:hover {
+    background-image: url("../assets/icons/real/vk.svg");
+}
+
+footer .socials .instagram {
+    background-image: url("../assets/icons/same/instagram.svg");
+}
+
+footer .socials .instagram:hover {
+    background-image: url("../assets/icons/real/instagram.svg");
+}
+
+footer .socials .soundcloud {
+    background-image: url("../assets/icons/same/soundcloud.svg");
+}
+
+footer .socials .soundcloud:hover {
+    background-image: url("../assets/icons/real/soundcloud.svg");
 }
 
 footer .socials .youtube {
-    width: 35px;
+    background-image: url("../assets/icons/same/youtube.svg");
+    /*background-size: 60px 30px;*/
 }
 
-footer .socials img:not(:last-child) {
-    margin-right: 10px;
+footer .socials .youtube:hover {
+    background-image: url("../assets/icons/real/youtube.svg");
 }
 
-/*.socials :not(.youtube) {*/
-/*    height: 28px;*/
+/*footer .socials a:not(:last-child) {*/
+/*    margin-right: 5px;*/
 /*}*/
-
