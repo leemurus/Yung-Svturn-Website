@@ -4,20 +4,74 @@ body {
 
 main {
     margin-top: 2vh;
-    height: 80%;
+    height: fit-content;
     width: 100%;
 }
 
 main .container {
     width: 100%;
-    height: 100%;
-    margin-top: 20px;
+    height: fit-content;
 }
 
 main .container .latest-releases {
     width: 100%;
+    height: fit-content;
+    position: relative;
 }
 
 main .container .latest-releases img {
+    width: 100vw;
+}
+
+main .container .latest-releases .sticker {
+    width: 10vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+main .container .carousel {
+    display: flex;
     width: 100%;
+    height: fit-content;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+main .container .carousel .seat {
+    width: fit-content;
+    height: fit-content;
+}
+
+main .container .carousel .seat .track-item {
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh;
+    background: black;
+    transition: all 0.5s ease-in-out;
+}
+
+main .container .carousel .seat .track-item:hover {
+    background: whitesmoke;
+}
+
+main .container .carousel .seat .track-item:hover .track-text * {
+    color: black;
+}
+
+main .container .carousel .seat .track-item a {
+    text-decoration: none;
+}
+
+main .container .carousel .seat .track-item .track-pic {
+    width: fit-content;
+    height: fit-content;
+}
+
+main .container .carousel .seat .track-item .track-pic img {
+    width: 48.5vh;
+}
+
+main .container .carousel .seat .track-item .track-text{
+    font-size: 2vh;
 }

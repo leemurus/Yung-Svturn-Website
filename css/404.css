@@ -6,10 +6,23 @@ main {
     font-family: "Nunito Sans", serif;
 }
 
+body {
+    height: 100%;
+}
+
 .code-error {
-    font-size: 7.5em;
-    margin: 15px 0px;
+    font-size: 15vh;
+    margin: 1.5vh 0px;
     font-weight: bold;
+}
+
+.row-text h2 {
+    font-size: 1.5vw;
+    margin: 0;
+}
+
+.row-text p {
+    font-size: 0.95vw;
 }
 
 .container {
@@ -29,7 +42,7 @@ main {
 }
 
 .container .row-svg object {
-    width: 75%;
+    width: 40vw;
 }
 
 .home_button {
@@ -37,16 +50,15 @@ main {
     overflow: hidden;
     background: transparent;
     position: relative;
-    padding: 8px 50px;
-    border-radius: 30px;
-    border: 4px solid white;
+    padding: 0.3vw 3vw;
+    border-radius: 3vw;
+    border: 0.3vw solid white;
     cursor: pointer;
-    font-size: 1em;
-    letter-spacing: 2px;
-    -webkit-transition: 0.2s ease;
+    font-size: 2vh;
+    letter-spacing: 0.2vh;
     transition: 0.2s ease;
     font-weight: bold;
-    margin: 5px 0px;
+    margin: 0.5vh 0;
     color: white;
     outline: transparent;
 }
@@ -56,12 +68,13 @@ main {
     position: absolute;
     left: 0;
     top: 0;
-    width: 0%;
+    width: 0;
     height: 100%;
     background: white;
     z-index: -1;
     -webkit-transition: 0.2s ease;
     transition: 0.5s ease;
+    outline: transparent;
 }
 
 .home_button:hover {

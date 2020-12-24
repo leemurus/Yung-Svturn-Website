@@ -4,7 +4,8 @@
 }
 
 main {
-    margin-top: 15vh;
+    margin-top: 10vh;
+    height: fit-content;
 }
 
 main .container {
@@ -47,18 +48,150 @@ main .container .track .track-panel .player {
     padding-top: 10vh;
     padding-left: 5vh;
     width: 100%;
-    height: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
 }
 
-main .container .track .track-panel .player .play_button {
+main .container .track .track-panel .player .play_button,
+main .container .track .track-panel .player .paused {
     width: var(--play_button_width);
     height: var(--play_button_height);
     background-size: var(--play_button_width) var(--play_button_height);
-    background-image: url("../assets/images/play-button.svg");
     background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+main .container .track .track-panel .player .play_button:hover,
+main .container .track .track-panel .player .paused:hover {
+    cursor: pointer;
+    background-image: url("../assets/images/play-button-hov.svg");
+    opacity: 1.0;
+}
+
+main .container .track .track-panel .player .play_button {
+    background-image: url("../assets/images/play-button.svg");
+}
+
+main .container .track .track-panel .player .paused {
+    background-image: url("../assets/images/paused-button.svg");
 }
 
 main .container .track .track-panel .player .play_button:hover {
     background-image: url("../assets/images/play-button-hov.svg");
-    background-repeat: no-repeat;
+}
+
+main .container .track .track-panel .player .paused:hover {
+    background-image: url("../assets/images/paused-button-hov.svg");
+}
+
+main .container .track .track-panel .player .seekbar input {
+    width: 70vh;
+    height: 1vh;
+    margin-left: 3vh;
+    background: white;
+    opacity: 0.8;
+    outline: none;
+    -webkit-appearance: none;
+    -webkit-transition: .3s;
+    border-radius: 1vh;
+    transition: opacity .2s;
+}
+
+main .container .track .track-panel .player .seekbar input:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+main .container .track .track-panel .player .seekbar input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+main .container .track .track-panel .player .seekbar input::-webkit-slider-thumb:hover {
+    background: #e8150c;
+}
+
+main .container .track .track-panel .buy-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 10vh;
+    margin-left: 5vw;
+}
+
+main .container .track .track-panel .buy-track .buy_button {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 8vw;
+    background: #fff;
+    color: #000;
+    font: 700 1.125em/ 3 trebuchet ms, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10vh;
+    opacity: 0.8;
+
+    --p: 0;
+    --q: calc(1 - var(--p));
+}
+
+main .container .track .track-panel .buy-track .buy_button:before,
+main .container .track .track-panel .buy-track .buy_button:after {
+    --i: var(--p);
+    --j: calc(1 - var(--i));
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--j) * (100% - 12.36932em));
+    width: 12.36932em;
+    transform-origin: calc(var(--j) * 100%) calc(var(--i) * 100%);
+    transform: rotate(-14.03624deg) translate(calc(var(--q) * (1 - 2 * var(--i)) * -100%));
+    box-shadow: 0 0 0 1px currentcolor;
+    background: currentcolor;
+    color: #e8150c;
+    transition: transform .5s ease-in-out;
+    content: "";
+    opacity: 1;
+}
+
+main .container .track .track-panel .buy-track .buy_button:after {
+    --i: var(--q);
+}
+
+main .container .track .track-panel .buy-track .buy_button:hover,
+main .container .track .track-panel .buy-track .buy_button:focus {
+    --p: 1;
+}
+
+main .container .additional_information {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: 10vh;
+}
+
+main .container .additional_information .lyrics {
+    padding-left: 20vh;
+    width: 50%;
+    float: right;
+}
+
+main .container .additional_information p {
+    width: 50%;
+    word-wrap: break-word;
+}
+
+main .container .additional_information .videos {
+    width: 50%;
 }

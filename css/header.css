@@ -3,12 +3,13 @@ main {
 }
 
 header {
-    /*position: fixed;*/
+    position: sticky;
     top: 0;
     width: 100%;
     height: 10vh;
     background-color: black;
-    opacity: 0.9;
+    opacity: 0.95;
+    z-index: 50;
 }
 
 header .container {
@@ -30,9 +31,7 @@ header .container .logo img {
 }
 
 header .container .logo .name {
-    color: white;
     font-size: 3vh;
-    font-family: "road page", serif;
 }
 
 header .container nav {
@@ -40,20 +39,18 @@ header .container nav {
     align-items: center;
     justify-content: flex-end;
     width: calc(100% - 15vh);
-    height: 2vh;
 }
 
 header .container nav ul {
-    padding: 0;
+    display: flex;
     margin: 0;
     float: right;
-    margin-right: 2vh;
+    padding: 0 1.5vw 0 0;
     list-style: none;
 }
 
 header .container nav ul li {
-    display: inline;
-    margin-left: 2vh;
+    margin-left: 1.5vw;
 }
 
 header .container nav ul li a {
@@ -66,20 +63,25 @@ header .container nav ul li a {
     position: relative;
 }
 
-header .container nav ul li a:before {
-    content: "";
+header .container nav ul li a {
+    cursor: pointer;
+}
+
+header .container nav ul li a:before,
+header .container nav ul li .selected:before {
+    content: '';
     position: absolute;
     width: 100%;
     height: 0;
-    bottom: 0;
+    bottom: -0.3vh;
     left: 0;
     background-color: #e8150c;
-    transition: all 0.3s ease-in-out;
 }
 
-header .container nav ul li a:hover:before {
+header .container nav ul li a:hover:before,
+header .container nav ul li .selected:before {
     visibility: visible;
-    height: 1px;
+    height: 0.1vh;
 }
 
 header .container nav ul li a:hover {

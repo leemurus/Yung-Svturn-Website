@@ -1,6 +1,7 @@
 main .container {
     width: 100%;
-    margin-top: 150px;
+    height: fit-content;
+    margin-top: 5vh;
 }
 
 main .container .photo {
@@ -48,10 +49,11 @@ main .container .signature-container {
 }
 
 main .container .signature-container .signature {
+    font-size: 2vh;
     float: right;
     text-align: center;
 }
 
 main .container .signature-container .signature .date {
-    margin-top: -10px;
+    margin-top: -1.5vh;
 }
