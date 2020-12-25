@@ -1,84 +1,169 @@
-.container {
+main .container {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    font-size: 1.5em;
+    width: 80vw;
+    margin: auto;
+}
+
+main .container h2 {
+    margin: 0 0 2vh 0;
+}
+
+main .container .contact-panel {
+    display: flex;
+    width: 100%;
     height: fit-content;
 }
 
-.container .contact-panel {
-    display: flex;
+main .container .contact-panel > * {
+    flex: 1 1 1vh;
 }
-
 
 /* info block */
 
-.container .contact-panel .info {
+main .container .contact-panel .info {
+    flex-grow: 3;
     display: flex;
     flex-direction: column;
-    margin-left: 2.5vw;
+    margin-right: 2.5vw;
 }
 
-.container .contact-panel .info div {
+main .container .contact-panel .info div {
     margin-top: 5vh;
-    line-height: 2.5vh;
+    line-height: 2;
 }
 
-.container .contact-panel .info .contacts {
+main .container .contact-panel .info .contacts {
     display: flex;
     flex-direction: column;
 }
-
 
 /* feedback block */
 
-.container .contact-panel .feedback-form {
+main .container .contact-panel .feedback-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 10vw;
-    background-color: crimson;
-    padding: 3vh;
-    border-radius: 2vh;
+    justify-content: space-between;
+    padding: 2vh;
+    border-radius: 3vh;
+    width: fit-content;
+    background: url("../assets/images/space.jpg") no-repeat center;
+    background-size: 100% 100%;
+    box-shadow: 0 0 1.5vh whitesmoke;
 }
 
-.container .contact-panel .feedback-form label {
-    display: none;
-}
-
-.container .contact-panel .feedback-form input {
+main .container .contact-panel .feedback-form input,
+main .container .contact-panel .feedback-form textarea {
     text-align: start;
-    color: black;
+    width: 100%;
     box-sizing: border-box;
     background: none;
     outline: none;
     resize: none;
     border: 0;
+    padding-top: 0;
+    padding-left: 0;
     transition: all 0.3s;
-    border-bottom: 2px solid #bebed2;
+    border-bottom: 0.15vw solid #bebed2;
 }
 
-#fname {
-    flex-grow: 1;
+main .container .contact-panel .feedback-form input {
+    margin-bottom: 2vh;
 }
 
+.container .contact-panel .feedback-form input::placeholder,
+.container .contact-panel .feedback-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1em;
+}
+
+.container .contact-panel .feedback-form input:placeholder-shown,
+.container .contact-panel .feedback-form textarea:placeholder-shown {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1em;
+}
+
+.container .contact-panel .feedback-form input:focus::placeholder,
+.container .contact-panel .feedback-form textarea:focus::placeholder {
+    color: transparent;
+}
+
+main .container .contact-panel .feedback-form input:focus,
+.container .contact-panel .feedback-form textarea:focus {
+    outline: none;
+    border-bottom-color: white;
+}
+
+#fname,
 #fmail {
     flex-grow: 1;
 }
 
-#fdecription {
-    flex-grow: 5;
+#fdescription {
+    flex-grow: 15;
 }
 
-.container .contact-panel .feedback-form input:not(:last-child) {
-    margin-bottom: 2vh;
-}
-
-
-.container .contact-panel .send {
+main .container .contact-panel .send {
     background: 0;
-    border: 2px solid #78788c;
-    outline: transparent;
+    border: 0.185vw solid white;
     cursor: pointer;
-    padding: 1.5vh;
-    width: fit-content;
-    color: black;
+    padding: 1vh 5vh;
+    color: white;
+    font-weight: bold;
     margin-top: 3vh;
+    margin-bottom: 1.5vh;
+    border-radius: 1vh;
+}
+
+main .container .contact-panel .send:hover {
+    background: white;
+    color: black;
+}
+
+.send:hover {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+/* map block */
+
+main .container .yandex-maps {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    margin: 20vh 0;
+    background-color: transparent;
+}
+
+main .container .yandex-maps iframe {
+    width: 100%;
+    height: 50vh;
+    border-radius: 1vw;
+    border-width: 0;
+    border-color: transparent;
+    box-shadow: 0 0 5vw 1vw #e8150c;
 }

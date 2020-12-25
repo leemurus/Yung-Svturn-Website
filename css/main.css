@@ -1,10 +1,4 @@
-body {
-    /*overflow: scroll;*/
-}
-
 main {
-    margin-top: 2vh;
-    height: fit-content;
     width: 100%;
 }
 
@@ -20,7 +14,7 @@ main .container .latest-releases {
 }
 
 main .container .latest-releases img {
-    width: 100vw;
+    width: 100%;
 }
 
 main .container .latest-releases .sticker {
@@ -46,7 +40,7 @@ main .container .carousel .seat {
 main .container .carousel .seat .track-item {
     width: fit-content;
     height: fit-content;
-    padding: 1vh;
+    padding: 0.5vw;
     background: black;
     transition: all 0.5s ease-in-out;
 }
@@ -69,9 +63,9 @@ main .container .carousel .seat .track-item .track-pic {
 }
 
 main .container .carousel .seat .track-item .track-pic img {
-    width: 48.5vh;
+    width: 24vw;
 }
 
-main .container .carousel .seat .track-item .track-text{
-    font-size: 2vh;
+main .container .carousel .seat .track-item .track-text {
+    font-size: 1vw;
 }

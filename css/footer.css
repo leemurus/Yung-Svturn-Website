@@ -1,24 +1,30 @@
-footer {
+main {
+    min-height: calc(100vh - var(--header-height) - var(--main-margin-top) - var(--footer-height));
+}
+
+footer .container {
     display: flex;
     align-items: flex-end;
     width: 100vw;
-    height: 12vh;
+    height: var(--footer-height);
+    left: 0;
+    bottom: 0;
 }
 
-footer > *:not(.name) {
-    margin-bottom: 2vh;
+footer .container > *:not(.name) {
+    margin-bottom: 1.5vh;
     padding-left: 1.7vh;
     padding-right: 1.7vh;
 }
 
-footer .socials {
+footer .container .socials {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
     width: 30vw;
 }
 
-footer .socials a {
+footer .container .socials a {
     --icon-width: 4vh;
     --icon-height: 2.8vh;
     display: flex;
@@ -29,64 +35,56 @@ footer .socials a {
     background-size: var(--icon-width) var(--icon-height);
     background-position: center;
     background-repeat: no-repeat;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
-footer .socials a:not(:last-child) {
+footer .container .socials a:not(:last-child) {
     margin-right: 1.8vh;
 }
 
-footer .socials .vk {
+footer .container .socials .vk {
     background-image: url("../assets/icons/same/vk.svg");
 }
 
-footer .socials .vk:hover {
+footer .container .socials .vk:hover {
     background-image: url("../assets/icons/real/vk.svg");
 }
 
-/*footer .socials .vk:after {*/
-/*    background-image: url("../assets/icons/real/vk.svg");*/
-/*}*/
-
-footer .socials .vk:hover:after {
-    background-image: url("../assets/icons/real/vk.svg");
-}
-
-footer .socials .instagram {
+footer .container .socials .instagram {
     background-image: url("../assets/icons/same/instagram.svg");
 }
 
-footer .socials .instagram:hover {
+footer .container .socials .instagram:hover {
     background-image: url("../assets/icons/real/instagram.svg");
 }
 
-footer .socials .soundcloud {
+footer .container .socials .soundcloud {
     background-image: url("../assets/icons/same/soundcloud.svg");
 }
 
-footer .socials .soundcloud:hover {
+footer .container .socials .soundcloud:hover {
     background-image: url("../assets/icons/real/soundcloud.svg");
 }
 
-footer .socials .youtube {
+footer .container .socials .youtube {
     background-image: url("../assets/icons/same/youtube.svg");
 }
 
-footer .socials .youtube:hover {
+footer .container .socials .youtube:hover {
     background-image: url("../assets/icons/real/youtube.svg");
 }
 
-footer .name {
+footer .container .name {
     align-self: flex-start;
     font-size: 5vh;
     width: 40vw;
     text-align: center;
 }
 
-footer .copyright {
+footer .container .copyright {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    font-size: 1.25vh;
+    font-size: .6vw;
     width: 30vw;
 }

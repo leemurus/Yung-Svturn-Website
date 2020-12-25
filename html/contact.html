@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>YUNG SVTURN - CONTACT</title>
+    <title>CONTACT - YUNG SVTURN</title>
     <link rel="shortcut icon" href="../assets/favicons/favicon.png" type="image/png">
     <link rel="stylesheet" href="../css/utils.css">
     <link rel="stylesheet" href="../css/loader.css">
@@ -30,8 +30,10 @@
 <header>
     <div class="container">
         <div class="logo">
-            <img src="../assets/images/logo.png" alt="">
-            <span class="name yung-svturn no-highlight">YUNG SVTURN</span>
+            <a href="main.html">
+                <img src="../assets/images/logo.png" alt="">
+                <span class="name yung-svturn no-highlight">YUNG SVTURN</span>
+            </a>
         </div>
         <nav>
             <ul>
@@ -56,50 +58,53 @@
                 <div class="greeting">
                     <span class="yung-svturn">YUNG SVTURN</span> открыт для сотрудничества с продюсерами, операторами и режиссерами, специалистами по компьютерной графике и дизайнерами, промо группами и режиссерами-постановщиками концертных шоу.
                     Нам нужны креативные люди в разных областях, связанных с музыкальной индустрией.
-                    Все ваши предложения отправляйте на адрес <a target="_blank" href="mailto:mail@mail.com">mail@mail.com</a>.
+                    Все ваши предложения отправляйте на адрес <a target="_blank" href="mailto:svturn808@yandex.ru">svturn808@yandex.ru</a>.
                 </div>
 
                 <div class="contacts">
                     <span>Адрес: г. Санкт-Петербург, Кронверкский пр., 49</span>
-                    <span>Номер телефона: <a target="_blank" href="tel:+78005553535">+7 (800) 555 35 35</a></span>
-                    <span>Почта: <a target="_blank" href="mailto:promomail@mail.com">promomail@mail.com</a></span>
+                    <span>Номер телефона: <a target="_blank" href="tel:+375299999999">+375 (29) 999 99 99</a></span>
+                    <span>Почта: <a target="_blank" href="mailto:svturn808@yandex.ru">svturn808@yandex.ru</a></span>
                 </div>
             </div>
 
-            <form class="feedback-form">
+            <form class="feedback-form" autocomplete="off">
                 <h2>Обратная связь</h2>
-                <label for="fname">Name</label>
-                <input id="fname" type="text" placeholder="Имя">
-                <label for="fmail">Email</label>
-                <input id="fmail" type="email" placeholder="Почта">
-                <label for="fdecription">Description</label>
-                <input id="fdecription" type="text" placeholder="Сообщение">
+                <input id="fname" type="text" placeholder="Имя" autocomplete="off"/>
+                <input id="fmail" type="email" placeholder="Почта" autocomplete="email"/>
+                <textarea id="fdescription" type="text" placeholder="Сообщение" autocomplete="off"></textarea>
                 <button class="send">Отправить</button>
             </form>
+        </div>
 
-            </div>
+        <div class="yandex-maps no-highlight">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0ead088c3188cacf244ac57cf65a74e05a2c57d8e513d060bf73d9525a816427&amp;source=constructor"></iframe>
         </div>
     </div>
 </main>
 
-
-
 <!-- ======================================= FOOTER ======================================= -->
 
 <footer>
-    <div class="socials">
-        <a class="vk" href="https://vk.com/yungsvturn_official"></a>
-        <a class="instagram" href="https://www.instagram.com/yungsvturn"></a>
-        <a class="soundcloud" href="https://soundcloud.com/lvtio6bqju7h"></a>
-        <a class="youtube" href="https://www.youtube.com/channel/UConnrDaXTCEuGsGX43CcjyQ"></a>
-    </div>
-    <span class="name yung-svturn no-highlight">
+    <div class="container">
+        <div class="socials">
+            <a class="vk" target="_blank" href="https://vk.com/yungsvturn_official"></a>
+            <a class="instagram" target="_blank" href="https://www.instagram.com/yungsvturn"></a>
+            <a class="soundcloud" target="_blank" href="https://soundcloud.com/lvtio6bqju7h"></a>
+            <a class="youtube" target="_blank" href="https://www.youtube.com/channel/UConnrDaXTCEuGsGX43CcjyQ"></a>
+        </div>
+        <span class="name yung-svturn no-highlight">
         YUNG SVTURN
-    </span>
-    <span class="copyright">
-        © ОФИЦИАЛЬНЫЙ САЙТ ИСПОЛНИТЕЛЯ YUNG SVTURN, 2020. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
-    </span>
+        </span>
+        <span class="copyright">
+            © ОФИЦИАЛЬНЫЙ САЙТ ИСПОЛНИТЕЛЯ YUNG SVTURN, 2020. ВСЕ ПРАВА ЗАЩИЩЕНЫ.
+        </span>
+    </div>
 </footer>
+
+<!-- ======================================= UP-BUTTON ======================================= -->
+
+<div class="up-button"></div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://livejs.com/live.js"></script>

@@ -9,10 +9,14 @@ function initMusicPlayer() {
     const audio = $('.seekbar audio').get(0);
     const button = $('.player .play_button');
     const seekbar = $('.seekbar input');
+    const timer = $('.player .time span');
 
-    seekbar.val(0);
-    seekbar.attr('min', 0);
-    seekbar.attr('max', parseInt(audio.duration));
+    $(audio).on('loadedmetadata', function () {
+        audio.volume = 0.5;
+        seekbar.val(0);
+        seekbar.attr('min', 0);
+        seekbar.attr('max', parseInt(audio.duration));
+    });
 
     button.on('click', function () {
         if (audio.paused) {
@@ -24,15 +28,27 @@ function initMusicPlayer() {
         }
     });
 
+    $(audio).on('ended', function () {
+        button.removeClass('paused');
+    })
+
     seekbar.on('change', function () {
         audio.currentTime = seekbar.val();
+        updateTimer(timer, seekbar.val(), parseInt(audio.duration));
         updateSeekBarProgress(seekbar);
     });
 
     setInterval(function () {
-        seekbar.val(parseInt(audio.currentTime));
+        seekbar.val(parseInt(audio.currentTime))
+        updateTimer(timer, seekbar.val(), parseInt(audio.duration));
         updateSeekBarProgress(seekbar);
     }, 1000);
+}
+
+function updateTimer(timer, curTime, totalTime) {
+    timer.text(
+        secondsTimeSpanToMS(curTime) + ' / ' + secondsTimeSpanToMS(totalTime)
+    );
 }
 
 function updateSeekBarProgress(seekbar) {
@@ -41,7 +57,13 @@ function updateSeekBarProgress(seekbar) {
 }
 
 function calculateRatio(value, min, max) {
-    return ((value - min) / (max - min)).toFixed(2);
+    return (((value - min) / (max - min)) + 0.005).toFixed(3);
+}
+
+function secondsTimeSpanToMS(s) {
+    const m = Math.floor(s / 60);
+    s -= m * 60;
+    return (m < 10 ? '0' + m : m) + ":" + (s < 10 ? '0' + s : s);
 }
 
 function getLinearGradientCSS(ratio, leftColor, rightColor) {

@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "rus road page";
+    src: url("../assets/fonts/Rus-Road-Rage.ttf");
+}
+
 main .container {
     width: 100%;
     height: fit-content;
@@ -12,6 +17,7 @@ main .container .photo {
 main .container .photo img {
     border-radius: 50%;
     width: 20%;
+    box-shadow: 0 0 2.3vw 0.2vw antiquewhite;
 }
 
 main .container .title {
@@ -20,7 +26,9 @@ main .container .title {
 }
 
 main .container .title p {
-    margin: 0 0 30px;
+    font-family: "rus road page", serif;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
     font-size: 10vh;
 }
 
@@ -43,6 +51,8 @@ main .container .text pre {
 }
 
 main .container .signature-container {
+    display: flex;
+    justify-content: flex-end;
     margin: auto;
     width: 50%;
     text-align: right;
@@ -50,7 +60,6 @@ main .container .signature-container {
 
 main .container .signature-container .signature {
     font-size: 2vh;
-    float: right;
     text-align: center;
 }
 
